@@ -1,0 +1,9 @@
+{
+	"name": "binbin",
+	"location": "chinanorth2",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "2f70484b-3bcb-4408-b650-29be1ad71da8",
+		"tenantId": "b388b808-0ec9-4a09-a414-a7cbbd8b7e9b"
+	}
+}

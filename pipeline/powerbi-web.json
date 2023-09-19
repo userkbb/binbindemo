@@ -1,0 +1,68 @@
+{
+	"name": "powerbi-web",
+	"properties": {
+		"activities": [
+			{
+				"name": "gettoken",
+				"type": "WebActivity",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"url": "https://login.chinacloudapi.cn/5691a5bf-29c0-43e2-b547-1377a4110078/oauth2/token",
+					"method": "POST",
+					"headers": {
+						"Content-Type": "application/x-www-form-urlencoded"
+					},
+					"body": "grant_type=client_credentials&resource=https://analysis.chinacloudapi.cn/powerbi/api&client_id=81c27576-863d-43d7-95ec-f2ad5e443194&client_secret=Hxo4z~VP4vqWEx4G-uN_J1qZVaQ._i4Q_4"
+				}
+			},
+			{
+				"name": "getreport",
+				"type": "WebActivity",
+				"dependsOn": [
+					{
+						"activity": "gettoken",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"url": {
+						"value": "https://api.powerbi.cn/v1.0/myorg/groups/5ca8855e-7d1d-4ade-a4d4-d4b36543b505/reports/74254dff-d907-4639-b394-fd953b4f2089/export",
+						"type": "Expression"
+					},
+					"method": "GET",
+					"headers": {
+						"Authorization": {
+							"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Il9DSkFPdHlzWVZtNXhjMVlvSzBvUTdxeUJDUSIsImtpZCI6Il9DSkFPdHlzWVZtNXhjMVlvSzBvUTdxeUJDUSJ9.eyJhdWQiOiJodHRwczovL2FuYWx5c2lzLmNoaW5hY2xvdWRhcGkuY24vcG93ZXJiaS9hcGkiLCJpc3MiOiJodHRwczovL3N0cy5jaGluYWNsb3VkYXBpLmNuLzU2OTFhNWJmLTI5YzAtNDNlMi1iNTQ3LTEzNzdhNDExMDA3OC8iLCJpYXQiOjE2OTUxMDU4MDksIm5iZiI6MTY5NTEwNTgwOSwiZXhwIjoxNjk1MTA5NzA5LCJhaW8iOiI0MkpnWUpEWldWRzMrRWpHcm45THo0b0dCeW1ZQUFBPSIsImFwcGlkIjoiODFjMjc1NzYtODYzZC00M2Q3LTk1ZWMtZjJhZDVlNDQzMTk0IiwiYXBwaWRhY3IiOiIxIiwiaWRwIjoiaHR0cHM6Ly9zdHMuY2hpbmFjbG91ZGFwaS5jbi81NjkxYTViZi0yOWMwLTQzZTItYjU0Ny0xMzc3YTQxMTAwNzgvIiwiaWR0eXAiOiJhcHAiLCJvaWQiOiI4ZGEyYTUyMC04NmI0LTRlM2QtYTBkNy0xNzI4YjAyNDk2OTciLCJyaCI6IjAuREFJQXY2V1JWc0FwNGtPMVJ4TjNwQkVBZUFrQUFBQUFBQUFBd0FBQUFBQUFBQUFDQUFBLiIsInJvbGVzIjpbIlRlbmFudC5SZWFkV3JpdGUuQWxsIiwiVGVuYW50LlJlYWQuQWxsIl0sInN1YiI6IjhkYTJhNTIwLTg2YjQtNGUzZC1hMGQ3LTE3MjhiMDI0OTY5NyIsInRpZCI6IjU2OTFhNWJmLTI5YzAtNDNlMi1iNTQ3LTEzNzdhNDExMDA3OCIsInV0aSI6IlQxT3JmR0FzRjBtVkIzZzRMMFExQUEiLCJ2ZXIiOiIxLjAifQ.0vyz5dgh4W3QSkaoC6FoM0MqQ8qgsYbHNx_OaURaSWbls97N2U7kQb96XnktY-Jdrt7QqBMzhCbE_jQEE7MMM-pd7qGoFfOVRMgfrChe_DCUfEXEumjWEtMopRbVMMq7VY37e7-CFpKp2MHsRjhZWXjDwA8oZ5Sjh4Naib7UUxaeFWXOeUv2pJDZ7e26AdTcGGkOhLColjuZJAJLrSAbjn_YNBQd6xhQxDT6rzJvw7w4zWxjJDwIorDTXPEF5b1VfvKO3Y5wnPE0wkvUbXjhYmgZKy_Tbw_KtIqllSY3RZcJ5Ta3qiZQ5KMYKxNXgJ7sxKhmFK_Ig6xlvlLpvNnpsQ",
+							"type": "Expression"
+						},
+						"Content-Type": "application/json"
+					},
+					"body": {
+						"format": "PDF"
+					}
+				}
+			}
+		],
+		"annotations": [],
+		"lastPublishTime": "2023-09-19T08:11:19Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}
