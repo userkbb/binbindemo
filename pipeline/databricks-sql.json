@@ -47,7 +47,6 @@
 						"storeSettings": {
 							"type": "AzureBlobFSReadSettings",
 							"recursive": true,
-							"wildcardFolderPath": "aimee03",
 							"enablePartitionDiscovery": false
 						},
 						"formatSettings": {
