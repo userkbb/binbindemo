@@ -1,0 +1,191 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "testadf001"
+		},
+		"AzureBlobStorage1_connectionString": {
+			"value": ""
+		},
+		"AzureBlobStorage2_connectionString": {
+			"value": ""
+		},
+		"AzureBlobStorage3_connectionString": {
+			"value": ""
+		},
+		"AzureBlobStorage4_connectionString": {
+			"value": ""
+		},
+		"AzureDataLakeStorage1_accountKey": {
+			"value": ""
+		},
+		"AzureDataLakeStorage2_accountKey": {
+			"value": ""
+		},
+		"AzureDataLakeStorage3_accountKey": {
+			"value": ""
+		},
+		"AzureDatabricks1_accessToken": {
+			"value": ""
+		},
+		"AzureDatabricksDeltaLake1_accessToken": {
+			"value": ""
+		},
+		"AzureDatabricksDeltaLake2_accessToken": {
+			"value": ""
+		},
+		"AzureDatabricksDeltaLake3_accessToken": {
+			"value": ""
+		},
+		"AzureFileStorage1_connectionString": {
+			"value": ""
+		},
+		"AzureFunction1_functionKey": {
+			"value": ""
+		},
+		"AzureFunction2_functionKey": {
+			"value": ""
+		},
+		"AzureMySql0715_connectionString": {
+			"value": ""
+		},
+		"AzureMySql1_connectionString": {
+			"value": ""
+		},
+		"AzureMySql2_connectionString": {
+			"value": ""
+		},
+		"AzureMySql3_connectionString": {
+			"value": ""
+		},
+		"AzureMySql7150902_connectionString": {
+			"value": ""
+		},
+		"AzureMySql716_connectionString": {
+			"value": ""
+		},
+		"AzureSqlDatabase1_connectionString": {
+			"value": ""
+		},
+		"Blob001_connectionString": {
+			"value": ""
+		},
+		"CosmosDbNoSql1_connectionString": {
+			"value": ""
+		},
+		"CosmosDbNoSql2_connectionString": {
+			"value": ""
+		},
+		"Hive1_password": {
+			"value": ""
+		},
+		"Sftp1_privateKeyContent": {
+			"value": ""
+		},
+		"Sftp1_passPhrase": {
+			"value": ""
+		},
+		"Sftp2_privateKeyContent": {
+			"value": ""
+		},
+		"Sftp2_passPhrase": {
+			"value": ""
+		},
+		"SqlServer1_connectionString": {
+			"value": ""
+		},
+		"alexSqlserverdb_password": {
+			"value": ""
+		},
+		"bintest_accessToken": {
+			"value": ""
+		},
+		"linkedService1_connectionString": {
+			"value": ""
+		},
+		"linkedService2_accountKey": {
+			"value": ""
+		},
+		"linkedService3_password": {
+			"value": ""
+		},
+		"mysqlflexible0715_connectionString": {
+			"value": "Server=testmysql0715.mysql.database.chinacloudapi.cn;Port=3306;Database=db;UID=dbuser;SSLMode=1;UseSystemTrustStore=0"
+		},
+		"testgen2_accountKey": {
+			"value": ""
+		},
+		"AzureDataLakeStorage1_properties_typeProperties_url": {
+			"value": "https://abctest0624.dfs.core.chinacloudapi.cn/"
+		},
+		"AzureDataLakeStorage2_properties_typeProperties_url": {
+			"value": "https://abctest0624.dfs.core.chinacloudapi.cn/"
+		},
+		"AzureDataLakeStorage3_properties_typeProperties_url": {
+			"value": "https://aimeegen2.dfs.core.chinacloudapi.cn/"
+		},
+		"AzureFunction1_properties_typeProperties_functionAppUrl": {
+			"value": "https://testiothubbus.chinacloudsites.cn"
+		},
+		"AzureFunction2_properties_typeProperties_functionAppUrl": {
+			"value": "https://binbin.chinacloudsites.cn"
+		},
+		"AzureKeyVault1_properties_typeProperties_baseUrl": {
+			"value": "https://test0311sqlcolumnkey.vault.azure.cn/"
+		},
+		"AzureKeyVault2_properties_typeProperties_baseUrl": {
+			"value": "@{linkedService().KeyVaultURL}"
+		},
+		"Hive1_properties_typeProperties_host": {
+			"value": "zlxtest1018.azurehdinsight.cn"
+		},
+		"Hive1_properties_typeProperties_username": {
+			"value": "admin"
+		},
+		"Sftp1_properties_typeProperties_host": {
+			"value": "testgen2.blob.core.chinacloudapi.cn"
+		},
+		"Sftp1_properties_typeProperties_userName": {
+			"value": "testgen2.binbinadf.testsftp"
+		},
+		"Sftp2_properties_typeProperties_host": {
+			"value": "testgen2.blob.core.chinacloudapi.cn"
+		},
+		"Sftp2_properties_typeProperties_userName": {
+			"value": "testgen2.binbinadf.testsftp"
+		},
+		"alexSqlserverdb_properties_typeProperties_server": {
+			"value": "alexsqlserver.database.chinacloudapi.cn"
+		},
+		"alexSqlserverdb_properties_typeProperties_database": {
+			"value": "alextes"
+		},
+		"alexSqlserverdb_properties_typeProperties_userName": {
+			"value": "alex"
+		},
+		"bintest_properties_typeProperties_existingClusterId": {
+			"value": "0811-064225-k9vm5qtd"
+		},
+		"linkedService2_properties_typeProperties_url": {
+			"value": "https://testgen2.dfs.core.chinacloudapi.cn/"
+		},
+		"linkedService3_properties_typeProperties_userName": {
+			"value": "admin"
+		},
+		"testgen2_properties_typeProperties_url": {
+			"value": "https://testgen2.dfs.core.chinacloudapi.cn/"
+		},
+		"AzurePostgreSql31_properties_privateLinkResourceId": {
+			"value": "/subscriptions/361ced67-f97e-4cce-b2bf-7f215726e030/resourceGroups/bigdata/providers/Microsoft.DBforPostgreSQL/flexibleServers/pgtest02"
+		},
+		"AzurePostgreSql31_properties_groupId": {
+			"value": "postgresqlServer"
+		},
+		"AzurePostgreSql31_properties_fqdns": {
+			"value": [
+				"pgtest02.postgres.database.chinacloudapi.cn"
+			]
+		}
+	}
+}
