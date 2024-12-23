@@ -1,0 +1,22 @@
+{
+	"name": "mysqlflexible0715",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureMySql",
+		"typeProperties": {
+			"connectionString": "Server=testmysql0715.mysql.database.chinacloudapi.cn;Port=3306;Database=db;UID=dbuser;SSLMode=1;UseSystemTrustStore=0",
+			"password": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "AzureKeyVault2",
+					"type": "LinkedServiceReference",
+					"parameters": {
+						"KeyVaultURL": "https://test0311sqlcolumnkey.vault.azure.cn/"
+					}
+				},
+				"secretName": "mysqlbinbin"
+			}
+		}
+	}
+}

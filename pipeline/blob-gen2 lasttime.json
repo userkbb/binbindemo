@@ -1,5 +1,5 @@
 {
-	"name": "pipeline1",
+	"name": "blob-gen2 lasttime",
 	"properties": {
 		"activities": [
 			{
@@ -16,21 +16,30 @@
 				"userProperties": [],
 				"typeProperties": {
 					"source": {
-						"type": "AzureMySqlSource",
-						"queryTimeout": "02:00:00"
-					},
-					"sink": {
-						"type": "DelimitedTextSink",
+						"type": "ParquetSource",
 						"storeSettings": {
-							"type": "AzureBlobStorageWriteSettings"
+							"type": "AzureBlobStorageReadSettings",
+							"recursive": true,
+							"modifiedDatetimeStart": "2024-08-28T15:00:00Z",
+							"modifiedDatetimeEnd": "2024-08-29T16:25:00Z",
+							"wildcardFileName": "*",
+							"enablePartitionDiscovery": false
 						},
 						"formatSettings": {
-							"type": "DelimitedTextWriteSettings",
-							"quoteAllText": true,
-							"fileExtension": ".txt"
+							"type": "ParquetReadSettings"
+						}
+					},
+					"sink": {
+						"type": "ParquetSink",
+						"storeSettings": {
+							"type": "AzureBlobFSWriteSettings"
+						},
+						"formatSettings": {
+							"type": "ParquetWriteSettings"
 						}
 					},
 					"enableStaging": false,
+					"parallelCopies": 32,
 					"translator": {
 						"type": "TabularTranslator",
 						"typeConversion": true,
@@ -42,20 +51,20 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "AzureMySqlTable1",
+						"referenceName": "Parquet1",
 						"type": "DatasetReference"
 					}
 				],
 				"outputs": [
 					{
-						"referenceName": "DelimitedText1",
+						"referenceName": "Parquet2",
 						"type": "DatasetReference"
 					}
 				]
 			}
 		],
 		"annotations": [],
-		"lastPublishTime": "2024-06-18T10:05:47Z"
+		"lastPublishTime": "2024-08-29T08:49:26Z"
 	},
 	"type": "Microsoft.DataFactory/factories/pipelines"
 }

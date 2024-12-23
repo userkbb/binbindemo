@@ -1,0 +1,17 @@
+{
+	"name": "AzureKeyVault2",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"parameters": {
+			"KeyVaultURL": {
+				"type": "string",
+				"defaultValue": "https://test0311sqlcolumnkey.vault.azure.cn/"
+			}
+		},
+		"annotations": [],
+		"type": "AzureKeyVault",
+		"typeProperties": {
+			"baseUrl": "@{linkedService().KeyVaultURL}"
+		}
+	}
+}

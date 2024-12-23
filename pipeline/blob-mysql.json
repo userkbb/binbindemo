@@ -1,5 +1,5 @@
 {
-	"name": "pipeline1",
+	"name": "blob-mysql",
 	"properties": {
 		"activities": [
 			{
@@ -16,19 +16,20 @@
 				"userProperties": [],
 				"typeProperties": {
 					"source": {
-						"type": "AzureMySqlSource",
-						"queryTimeout": "02:00:00"
-					},
-					"sink": {
-						"type": "DelimitedTextSink",
+						"type": "DelimitedTextSource",
 						"storeSettings": {
-							"type": "AzureBlobStorageWriteSettings"
+							"type": "AzureBlobStorageReadSettings",
+							"recursive": true,
+							"enablePartitionDiscovery": false
 						},
 						"formatSettings": {
-							"type": "DelimitedTextWriteSettings",
-							"quoteAllText": true,
-							"fileExtension": ".txt"
+							"type": "DelimitedTextReadSettings"
 						}
+					},
+					"sink": {
+						"type": "AzureMySqlSink",
+						"writeBatchSize": 10000,
+						"writeBatchTimeout": "00:00:30"
 					},
 					"enableStaging": false,
 					"translator": {
@@ -42,20 +43,20 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "AzureMySqlTable1",
+						"referenceName": "DelimitedText2",
 						"type": "DatasetReference"
 					}
 				],
 				"outputs": [
 					{
-						"referenceName": "DelimitedText1",
+						"referenceName": "AzureMySqlTable3",
 						"type": "DatasetReference"
 					}
 				]
 			}
 		],
 		"annotations": [],
-		"lastPublishTime": "2024-06-18T10:05:47Z"
+		"lastPublishTime": "2024-09-02T03:25:40Z"
 	},
 	"type": "Microsoft.DataFactory/factories/pipelines"
 }

@@ -1,18 +1,15 @@
 {
-	"name": "Parquet2",
+	"name": "AzureDatabricksDeltaLakeDataset1",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "testgen2",
+			"referenceName": "AzureDatabricksDeltaLake1",
 			"type": "LinkedServiceReference"
 		},
 		"annotations": [],
-		"type": "Parquet",
+		"type": "AzureDatabricksDeltaLakeDataset",
 		"typeProperties": {
-			"location": {
-				"type": "AzureBlobFSLocation",
-				"fileSystem": "binbinuc"
-			},
-			"compressionCodec": "snappy"
+			"database": "binbin`.`adf",
+			"table": "people1"
 		},
 		"schema": []
 	},

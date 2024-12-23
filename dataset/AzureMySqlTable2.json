@@ -1,0 +1,16 @@
+{
+	"name": "AzureMySqlTable2",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "mysqlflexible0715",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureMySqlTable",
+		"schema": [],
+		"typeProperties": {
+			"tableName": "table0830"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

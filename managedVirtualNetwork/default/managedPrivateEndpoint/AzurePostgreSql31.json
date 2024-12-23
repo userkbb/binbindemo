@@ -1,0 +1,10 @@
+{
+	"name": "AzurePostgreSql31",
+	"properties": {
+		"privateLinkResourceId": "/subscriptions/361ced67-f97e-4cce-b2bf-7f215726e030/resourceGroups/bigdata/providers/Microsoft.DBforPostgreSQL/flexibleServers/pgtest02",
+		"groupId": "postgresqlServer",
+		"fqdns": [
+			"pgtest02.postgres.database.chinacloudapi.cn"
+		]
+	}
+}

@@ -1,0 +1,16 @@
+{
+	"name": "AzureBlobStorage3",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureBlobStorage",
+		"typeProperties": {
+			"connectionString": "DefaultEndpointsProtocol=https;AccountName=blob001;EndpointSuffix=core.chinacloudapi.cn;",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiI2ZTEwM2JjYi03NjgyLTRiYjEtYjk5OC01MGRlNGVjMGY5ZDQiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"connectVia": {
+			"referenceName": "binbin-test0517",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}

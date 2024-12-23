@@ -1,27 +1,31 @@
 {
-	"name": "Parquet1",
+	"name": "blob001",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "Blob001",
 			"type": "LinkedServiceReference"
 		},
 		"annotations": [],
-		"type": "Parquet",
+		"type": "DelimitedText",
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"container": "binbin"
+				"fileName": "test2.csv",
+				"container": "test2"
 			},
-			"compressionCodec": "snappy"
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
 		},
 		"schema": [
 			{
-				"name": "COLUMN 1",
-				"type": "UTF8"
+				"name": "column1",
+				"type": "String"
 			},
 			{
-				"name": "COLUMN 2",
-				"type": "UTF8"
+				"name": "column2",
+				"type": "String"
 			}
 		]
 	},

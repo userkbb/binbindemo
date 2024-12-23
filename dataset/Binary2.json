@@ -1,20 +1,18 @@
 {
-	"name": "Parquet2",
+	"name": "Binary2",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "testgen2",
+			"referenceName": "AzureDataLakeStorage2",
 			"type": "LinkedServiceReference"
 		},
 		"annotations": [],
-		"type": "Parquet",
+		"type": "Binary",
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileSystem": "binbinuc"
-			},
-			"compressionCodec": "snappy"
-		},
-		"schema": []
+				"fileSystem": "test624"
+			}
+		}
 	},
 	"type": "Microsoft.DataFactory/factories/datasets"
 }

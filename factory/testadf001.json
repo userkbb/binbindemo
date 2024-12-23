@@ -1,0 +1,9 @@
+{
+	"name": "testadf001",
+	"location": "chinanorth3",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "d436fecc-e7fe-478f-a5b1-430909736d94",
+		"tenantId": "b388b808-0ec9-4a09-a414-a7cbbd8b7e9b"
+	}
+}

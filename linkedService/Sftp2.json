@@ -1,0 +1,20 @@
+{
+	"name": "Sftp2",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "Sftp",
+		"typeProperties": {
+			"host": "testgen2.blob.core.chinacloudapi.cn",
+			"port": 22,
+			"skipHostKeyValidation": true,
+			"authenticationType": "SshPublicKey",
+			"userName": "testgen2.binbinadf.testsftp",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiI5M2ExOTU2Ni0wZjc2LTQ1Y2EtOGEyZS1mMTIwZjIxMWY5OTciLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"connectVia": {
+			"referenceName": "integrationRuntime7",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}
