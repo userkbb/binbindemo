@@ -1,0 +1,45 @@
+{
+	"name": "ch3gen2",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "cn3gen2",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "1104.csv",
+				"fileSystem": "binbin"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "id",
+				"type": "String"
+			},
+			{
+				"name": "name",
+				"type": "String"
+			},
+			{
+				"name": "other",
+				"type": "String"
+			},
+			{
+				"name": "FullAmount",
+				"type": "String"
+			},
+			{
+				"name": "KPIWeight",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

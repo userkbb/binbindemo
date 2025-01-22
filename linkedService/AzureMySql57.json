@@ -1,0 +1,12 @@
+{
+	"name": "AzureMySql57",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureMySql",
+		"typeProperties": {
+			"connectionString": "server=mysql57.mysql.database.chinacloudapi.cn;port=3306;database=test003;uid=admin123;sslmode=1;usesystemtruststore=0",
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIlRFU1RBREYwMDFfYmQwMzRmMDgtMDllNC00MWJjLWE4ZjItOGM5NTFmOWM0YzliIg0KfQ=="
+		}
+	}
+}

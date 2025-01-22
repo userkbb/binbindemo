@@ -1,0 +1,16 @@
+{
+	"name": "AzureMySqlTable4",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureMySql57",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureMySqlTable",
+		"schema": [],
+		"typeProperties": {
+			"tableName": "test"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
